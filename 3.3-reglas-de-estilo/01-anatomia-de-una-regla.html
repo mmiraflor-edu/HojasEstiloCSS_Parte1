@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+  3.3 REGLAS DE ESTILO · Ejemplo 01 — Selector { propiedad: valor; }
+  Regla 1: el ejemplo de la ilustración del tema (h1 azul, 12px).
+  Reglas 2-4: el ejemplo body / p / h1,h2 (agrupación de selectores con coma).
+  QUÉ OBSERVAR: h1 aparece en DOS reglas (la 1ª y la agrupada). Las dos se aplican;
+  donde chocan (color) gana la que va después → rojo. font-size: 12px se mantiene.
+  PRUEBA A CAMBIAR: borra la regla "h1, h2" y mira cómo h1 vuelve a azul.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Anatomía de una regla</title>
+  <style>
+    /* selector  { propiedad: valor; propiedad: valor; } */
+    h1 { color: blue; font-size: 12px; }
+
+    body {
+      background: white;
+      font-size: 11pt;
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      text-align: justify;
+    }
+    p {
+      text-indent: 2em;
+    }
+    h1, h2 {                 /* agrupación: misma declaración para h1 y h2 */
+      font-family: Verdana;
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Título h1 (12px por la primera regla, rojo por la regla agrupada)</h1>
+  <h2>Subtítulo h2 (Verdana, rojo)</h2>
+  <p>Este párrafo tiene sangría de primera línea de 2em (text-indent) y hereda de body
+    la fuente Arial, el tamaño de 11pt y el texto justificado. Escribe más texto aquí para
+    ver bien la justificación y la sangría en varias líneas de párrafo.</p>
+  <p>Segundo párrafo: también tiene sangría porque la regla p afecta a todos los párrafos.</p>
+</body>
+</html>

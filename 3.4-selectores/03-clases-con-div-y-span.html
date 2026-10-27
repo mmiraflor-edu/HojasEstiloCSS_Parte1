@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+  3.4 SELECTORES · Ejemplo 03 — Clases con <span> (ejemplo del refrán del tema)
+  <span> no tiene estilo propio: es perfecto para "marcar" un trozo de texto y
+  darle una clase.
+  QUÉ OBSERVAR: la clase .tipoletra se pone en <body> y la fuente la heredan todos.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Clases</title>
+  <style>
+    .rojo      { color: red; }
+    .tipoletra { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    .negrita   { font-weight: bold; }
+    .cursiva   { font-style: italic; }
+    .centrado  { text-align: center; }
+  </style>
+</head>
+<body class="tipoletra">
+  <h1>Ejemplo de uso de clases</h1>
+  <p class="centrado">
+    Quien pronto se acuesta y pronto se levanta,
+    es persona <span class="negrita">saludable</span>,
+    <span class="cursiva">rica</span>
+    y <span class="rojo">sabia</span>.
+  </p>
+  <div class="centrado">
+    <span class="negrita cursiva rojo">Este span tiene tres clases a la vez</span>
+  </div>
+</body>
+</html>

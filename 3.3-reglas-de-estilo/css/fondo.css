@@ -1,0 +1,17 @@
+/* css/fondo.css
+   La ruta de url() es RELATIVA AL ARCHIVO .CSS, no al HTML.
+   Este archivo está en  3.3-reglas-de-estilo/css/
+   La imagen está en     3.3-reglas-de-estilo/img/
+   Por eso hay que subir un nivel con ../                                      */
+body {
+  font-family: Arial, sans-serif;
+  margin: 30px;
+  background: url("../img/fondo.png");          /* imagen en mosaico */
+}
+.cabecera {
+  height: 200px;
+  background-image: url("../img/paisaje.png");
+  background-size: cover;                        
+  color: white;
+  padding: 20px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!--
+  3.3 VALORES DE COLOR · Ejemplo 06
+  El MISMO color escrito de formas distintas, y después la transparencia (canal alfa).
+  QUÉ OBSERVAR: las cuatro primeras cajas son idénticas.
+  En las cajas con transparencia se ve el fondo amarillo del contenedor a través:
+  cuanto más pequeño es el último valor, más transparente es el color.
+  Truco: F12 → haz clic en el cuadradito de color de una declaración para abrir el
+  selector y convertir entre formatos (hex, rgb, hsl).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Valores de color</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    h1 { background-color: #c3def5; color: rgb(192,192,192); } /* el del tema */
+
+    .muestra { width: 300px; height: 50px; color: white; font-weight: bold; margin: 0.5rem 0 0.5rem 0;}
+
+    /* Mismo color, cuatro formas */
+    .nombre { background-color: dodgerblue; }
+    .hex6   { background-color: #1e90ff; }
+    .rgb    { background-color: rgb(30, 144, 255); }
+    .hsl    { background-color: hsl(210, 100%, 56%); }
+    .hex3   { background-color: #f60; }          /* = #ff6600 */
+
+    /* Transparencia: se ve el fondo amarillo del contenedor a través */
+    .fondo  { width: 306px; background-color: yellow; }
+    .rgba1  { background-color: rgba(30, 144, 255, 1); }
+    .rgba5  { background-color: rgba(30, 144, 255, 0.5); }
+    .hsla2  { background-color: hsla(210, 100%, 56%, 0.2); color: black; }
+  </style>
+</head>
+<body>
+  <h1>h1 { background-color: #c3def5; color: rgb(192,192,192); }</h1>
+
+  <h2>Mismo color, cuatro formas</h2>
+  <div class="muestra nombre">dodgerblue</div>
+  <div class="muestra hex6">#1e90ff</div>
+  <div class="muestra rgb">rgb(30, 144, 255)</div>
+  <div class="muestra hsl">hsl(210, 100%, 56%)</div>
+
+  <h2>Hexadecimal corto</h2>
+  <div class="muestra hex3">#f60 (= #ff6600)</div>
+
+  <h2>Opacidad con rgba / hsla</h2>
+  <div class="fondo">
+    Contenedor con fondo amarillo
+    <div class="muestra rgba1">rgba(30, 144, 255, 1)</div>
+    <div class="muestra rgba5">rgba(30, 144, 255, 0.5)</div>
+    <div class="muestra hsla2">hsla(210, 100%, 56%, 0.2)</div>
+  </div>
+</body>
+</html>

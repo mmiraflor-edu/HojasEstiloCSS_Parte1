@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+  3.3 UNIDADES DE MEDIDA · Ejemplo 05 — rem (relativa a la fuente de <html>)
+  1rem = font-size de <html> (16px por defecto en casi todos los navegadores).
+  PRUEBA EN CLASE:
+    1) Cambia html { font-size: 16px; } por 24px (o 32px) y recarga.
+       - Bloque "px": NO cambia nada.
+       - Bloque "rem": crecen texto Y márgenes en proporción.
+    2) Comenta la regla html entera: se usa el tamaño por defecto del navegador.
+       Cambia el tamaño de fuente en la configuración del navegador → solo crece el
+       bloque rem (por eso rem es mejor para accesibilidad).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Unidades rem</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+
+    html { font-size: 16px; }            /* ← CAMBIA ESTE VALOR */
+    
+    .bloque { 
+      display: inline-block; vertical-align: top; width: 45%; /* Ignora estos atributos todavía no los hemos visto */
+      border: 1px solid #999; 
+      margin-right: 2%;
+    }
+
+    /*Estilos para párrafo y título 2 con px */
+    .con-px  p { font-size: 16px;  margin: 5px;     background-color: #ffcdd2; }
+    .con-px  h2 { font-size: 24px; }
+
+    /*Estilos para párrafo y título 2 con rem */
+    .con-rem p { font-size: 1rem;  margin: 0.2rem;  background-color: #c8e6c9; }
+    .con-rem h2 { font-size: 1.5rem; }
+  </style>
+</head>
+<body>
+  <h1>px frente a rem</h1>
+  <div class="bloque con-px">
+    <h2>Con px</h2>
+    <p>font-size: 16px; margin: 5px;</p>
+    <p>Si cambia la fuente base, este bloque se queda igual.</p>
+    <p>Párrafo 3</p>
+  </div>
+  <div class="bloque con-rem">
+    <h2>Con rem</h2>
+    <p>font-size: 1rem; margin: 0.2rem;</p>
+    <p>Si cambia la fuente base, crece todo en proporción.</p>
+    <p>Párrafo 3</p>
+  </div>
+  <p>Tabla rápida con html { font-size: 16px }: 0.5rem = 8px · 1rem = 16px · 2rem = 32px</p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+  3.4 SELECTORES · Ejemplo 01 — Selector de etiqueta y agrupación
+  div { ... }        → TODOS los <div> del documento
+  h1, h2, h3 { ... } → misma declaración para varias etiquetas (separadas por coma)
+  QUÉ OBSERVAR: el selector se escribe SIN < >.
+  PRUEBA A CAMBIAR: quita h3 del grupo; añade h4.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Selector de etiqueta</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    div { background-color: red; }
+    h1, h2, h3 { color: #ff6a00; }
+  </style>
+</head>
+<body>
+  <h1>Encabezado h1</h1>
+  <h2>Encabezado h2</h2>
+  <h3>Encabezado h3</h3>
+  <h4>Encabezado h4 (no está en el grupo)</h4>
+  <div>Primer div: fondo rojo</div>
+  <p>Un párrafo: no le afecta la regla div</p>
+  <div>Segundo div: también fondo rojo</div>
+</body>
+</html>

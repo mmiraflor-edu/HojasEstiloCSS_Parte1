@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+  3.4 PSEUDO-ELEMENTOS · Ejemplo 10 — ::first-letter y ::first-line
+  ::first-letter → primer carácter    ::first-line → primera línea VISUAL
+  QUÉ OBSERVAR: redimensiona la ventana → la "primera línea" cambia de palabras,
+  porque depende del ancho disponible, no del HTML.
+  El segundo bloque muestra el uso editorial típico: letra capital.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - first-letter y first-line</title>
+  <style>
+    body { 
+      font-family: Georgia, serif;
+    }
+
+    p::first-letter {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    p::first-line {
+      color: #ff0000;
+    }
+  </style>
+</head>
+<body>
+  <p>En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo
+    que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y
+    galgo corredor. Una olla de algo más vaca que carnero, salpicón las más noches.</p>
+  <p class="capitular">Duelos y quebrantos los sábados, lantejas los viernes, algún
+    palomino de añadidura los domingos, consumían las tres partes de su hacienda. El
+    resto della concluían sayo de velarte, calzas de velludo para las fiestas.</p>
+</body>
+</html>

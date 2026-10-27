@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+  3.3 REGLAS DE ESTILO · Ejemplo 02 — ¿Qué pasa si me equivoco?
+  El navegador NO muestra errores: simplemente IGNORA lo que no entiende.
+  Cada párrafo tiene una regla con un fallo distinto. Busca cuál es en cada caso.
+  Herramienta: F12 → pestaña Elementos → panel Estilos: las declaraciones inválidas
+  aparecen tachadas o con un aviso amarillo.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Errores de sintaxis</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+
+    /* ✔ Correcta */
+    .ok { color: green; font-weight: bold; }
+
+    /* ✘ Falta ; entre declaraciones → se pierden LAS DOS (el navegador lee
+         "green font-weight: bold" como un único valor inválido para color) */
+    .sin-punto-y-coma { color: green font-weight: bold; }
+
+    /* ✘ Propiedad mal escrita → se ignora solo esa declaración */
+    .propiedad-mal { colour: green; font-weight: bold; }
+
+    /* ✘ Valor no válido para la propiedad → se ignora */
+    .valor-mal { color: verde; font-weight: bold; }
+
+    /* ✘ Falta la unidad (12 en vez de 12px) → se ignora */
+    .sin-unidad { font-size: 30; color: green; }
+
+    /* ✘ Selector de clase sin punto → busca la ETIQUETA <aviso>, que no existe */
+    aviso { color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Errores típicos en reglas CSS</h1>
+  <p class="ok">1. Regla correcta: verde y negrita.</p>
+  <p class="sin-punto-y-coma">2. Falta un punto y coma: ni verde ni negrita.</p>
+  <p class="propiedad-mal">3. Propiedad mal escrita (colour): negrita sí, verde no.</p>
+  <p class="valor-mal">4. Valor no válido (verde): negrita sí, verde no.</p>
+  <p class="sin-unidad">5. Tamaño sin unidad: verde sí, tamaño 30 no.</p>
+  <p class="aviso">6. Selector sin punto: no se aplica nada.</p>
+</body>
+</html>

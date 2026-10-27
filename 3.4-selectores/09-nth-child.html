@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--
+  3.4 PSEUDO-CLASES ESTRUCTURALES · Ejemplo 09 — :nth-child(n), odd y even
+  Bloque A: posiciones concretas 1, 2 y 4.
+  Bloque B: odd (impares) / even (pares).
+  Bloque C: uso real → tabla "cebra" con tr:nth-child(even).
+  PRUEBA A CAMBIAR: nth-child(3n) → cada tercer elemento; nth-child(-n+2) → los dos primeros.
+-->
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>CSS - nth-child</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    div {
+      border: 1px solid #aaa;
+      margin: 10px;
+      padding: 0 10px;
+      width: fit-content;
+    }
+
+    /* Bloque A */
+    .posiciones p:nth-child(1) {
+      color: red;
+    }
+
+    .posiciones p:nth-child(2) {
+      color: green;
+    }
+
+    .posiciones p:nth-child(4) {
+      color: blue;
+    }
+
+    /* Bloque B */
+    .paridad p:nth-child(odd) {
+      color: red;
+    }
+
+    .paridad p:nth-child(even) {
+      color: green;
+    }
+
+    /* Bloque C */
+    table {
+      border-collapse: collapse;
+      margin: 10px;
+    }
+
+    th,td { /*Aplicar a todas las columnas sean cabecera o no*/
+      padding: 6px 14px;
+      border: 1px solid #ccc;
+    }
+
+    th { /*Aplicar solo a columnas cabecera*/
+      background-color: #37474f;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #e3f2fd;
+    }
+
+    /*
+      Este estilo se aplica a todas las filas, incluida la fila cabecera, pero
+      como las columnas cabeceras ya tienen un background-color, prevalece el estilo de th
+      es más específico, puedes probar a comentar el estilo de th y observará como ahora sí aparecerá este color
+    */
+    tr:hover {
+      background-color: #fff59d;
+    }
+  </style>
+</head>
+
+<body>
+  <h2>A) nth-child(1), (2) y (4)</h2>
+  <section class="posiciones">
+    <div>
+      <p>Primer párrafo</p>
+      <p>Segundo párrafo</p>
+      <p>Tercer párrafo</p>
+      <p>Cuarto párrafo</p>
+    </div>
+    <div>
+      <p>Primer párrafo</p>
+      <p>Segundo párrafo</p>
+      <p>Tercer párrafo</p>
+      <p>Cuarto párrafo</p>
+    </div>
+  </section>
+
+  <h2>B) nth-child(odd) y nth-child(even)</h2>
+  <section class="paridad">
+    <div>
+      <p>Primer párrafo</p>
+      <p>Segundo párrafo</p>
+      <p>Tercer párrafo</p>
+      <p>Cuarto párrafo</p>
+    </div>
+    <div>
+      <p>Primer párrafo</p>
+      <p>Segundo párrafo</p>
+      <p>Tercer párrafo</p>
+      <p>Cuarto párrafo</p>
+    </div>
+  </section>
+
+  <h2>C) Tabla: tr:nth-child(even)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Alumno/a</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ana</td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td>Luis</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>Marta</td>
+        <td>9</td>
+      </tr>
+      <tr>
+        <td>Jorge</td>
+        <td>7</td>
+      </tr>
+      <tr>
+        <td>Lucía</td>
+        <td>10</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

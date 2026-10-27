@@ -1,0 +1,180 @@
+/* =========================================================
+   sitio.css — Hoja externa compartida por index.html y contacto.html
+   Apartado 3.8: reúne lo visto en la parte 1.
+   Cada bloque indica el apartado del tema que repasa.
+   ========================================================= */
+
+/* --- 3.3 Unidades: rem para texto y espaciado --- */
+html {
+  font-size: 16px;
+}
+
+/* --- 3.5 Herencia: fuente y color se definen una vez en body --- */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #263238;
+  background-color: #f5f7fa;
+  margin: 0;
+}
+
+/* --- 3.4 Selector de etiqueta + 3.3 vh --- */
+header {
+  background-color: #1a237e;
+  color: white;
+  /* lo heredan h1 y p de la cabecera */
+  text-align: center;
+  padding: 2rem 1rem;
+  min-height: 25vh; /*Reduce la ventana y verás que cuando la altura llega a un límite no se reduce más*/
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* --- 3.4 Selector hijo + pseudo-clases de enlace (orden L-V-H-A) --- */
+nav {
+  background-color: #283593;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+nav>a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav>a:link {
+  color: #c5cae9;
+}
+
+nav>a:visited {
+  color: #c5cae9;
+}
+
+nav>a:hover {
+  color: #ffd54f;
+}
+
+nav>a:active {
+  color: #ff7043;
+}
+
+nav>a:focus {
+  border: 2px solid #ffd54f;
+}
+
+/* --- 3.4 Selector de identificador: página activa --- */
+#actual {
+  color: white;
+  border-bottom: 3px solid #ffd54f;
+}
+
+/* --- 3.3 % para un diseño fluido --- */
+main {
+  width: 80%;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+/* --- 3.4 Clases reutilizables --- */
+.tarjeta {
+  background-color: white;
+  border: 1px solid #cfd8dc;
+  /* px: detalle que no necesita escalar */
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tarjeta:hover {
+  border-color: #1a237e;
+}
+
+.destacado {
+  background-color: #fff8e1;
+}
+
+/* --- 3.4 Jerárquicos: hermano adyacente para la entradilla --- */
+.tarjeta h2+p {
+  font-style: italic;
+  color: #546e7a;
+}
+
+/* --- 3.4 Pseudo-elementos --- */
+.tarjeta h2::before {
+  content: "▸ ";
+  color: #ffb300;
+}
+
+.cita::before {
+  content: "«";
+}
+
+.cita::after {
+  content: "»";
+}
+
+/* --- 3.4 :nth-child en una tabla --- */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #cfd8dc;
+  padding: 0.4rem 0.8rem;
+  text-align: left;
+}
+
+th {
+  background-color: #1a237e;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #e8eaf6;
+}
+
+/* --- 3.4 :focus en formularios --- */
+label {
+  display: block; /*Esta propiedad la veremos más adelante*/
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 50%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid #b0bec5;
+}
+
+input:focus,
+textarea:focus {
+  background-color: #e8eaf6;
+}
+
+button {
+  display: block; /*Esta propiedad la veremos más adelante*/
+  margin-top: 1rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  background-color: #1a237e;
+  color: white;
+  cursor: pointer; /*No lo hemos visto, pero es posible cambiar el cursor del ratón*/
+}
+
+button:hover {
+  background-color: #3949ab;
+}
+
+/* --- 3.3 Colores con transparencia --- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(26, 35, 126, 0.1);
+}

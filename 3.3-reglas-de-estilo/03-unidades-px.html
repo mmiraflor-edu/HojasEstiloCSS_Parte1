@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+  3.3 UNIDADES DE MEDIDA · Ejemplo 03 — px (unidad absoluta)
+  QUÉ OBSERVAR: estrecha la ventana del navegador (o F12 → modo dispositivo móvil).
+    - La imagen de 800px NO se adapta: aparece barra de desplazamiento horizontal.
+    - La imagen con width: 100% se adapta al espacio disponible.
+  Uso razonable de px: bordes, líneas finas, sombras, detalles que no deben escalar.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Unidades px</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .fija { width: 800px; }
+    .fluida { width: 100%; }
+    div { border: 2px solid black; padding: 10px; margin-bottom: 20px; }
+    p { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>Unidades absolutas: px</h1>
+  <div>
+    <p>img { width: 800px; } → tamaño fijo</p>
+    <img class="fija" src="img/paisaje.png" alt="Paisaje de ejemplo">
+  </div>
+  <div>
+    <p>img { width: 100%; } → se adapta al contenedor (lo veremos con % en el ejemplo 04)</p>
+    <img class="fluida" src="img/paisaje.png" alt="Paisaje de ejemplo">
+  </div>
+  <div>Este div tiene un borde de 2px: aquí px es buena elección.</div>
+</body>
+</html>

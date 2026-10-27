@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+  3.8 EJEMPLO DE APLICACIÓN — Segunda página del mini sitio.
+  Usa la MISMA hoja css/sitio.css: aspecto coherente sin repetir CSS.
+  El enlace "Contacto" es ahora el que lleva id="actual".
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Científicos españoles - Contacto</title>
+  <link rel="stylesheet" href="css/sitio.css">
+</head>
+<body>
+  <header>
+    <h1>Científicos españoles</h1>
+    <p>Escríbenos si quieres proponer un nuevo científico o científica</p>
+  </header>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="contacto.html" id="actual">Contacto</a>
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS">MDN CSS</a>
+  </nav>
+  <main>
+    <section class="tarjeta">
+      <h2>Formulario de contacto</h2>
+      <p>Haz clic en un campo o recórrelos con la tecla Tab.</p>
+      <form action="destino.php" method="post">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text">
+        <label for="correo" name="correo">Correo electrónico</label>
+        <input id="correo" name="correo" type="email">
+        <label for="mensaje">Propuesta</label>
+        <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+  <footer>Lenguajes de Marcas · Ejemplo de aplicación de hojas de estilo</footer>
+</body>
+</html>

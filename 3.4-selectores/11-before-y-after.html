@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+  3.4 PSEUDO-ELEMENTOS · Ejemplo 11 — ::before y ::after (necesitan la propiedad content)
+  - h1::before / h2::after con una imagen: content: url(img/smiley.png)  (ejemplo del tema)
+  - Texto decorativo: comillas, iconos, avisos.
+  QUÉ OBSERVAR: ese contenido NO está en el HTML; intenta seleccionarlo con el ratón
+  (no se puede). Por eso solo debe usarse para elementos DECORATIVOS.
+  PRUEBA A CAMBIAR: borra la línea content de .aviso::before → desaparece el icono.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - before y after</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    h1::before { content: url(img/smiley.png); margin-right: 10px; }
+    h2::after  { content: url(img/smiley.png); margin-left: 10px; }
+
+    .cita::before { content: "« "; color: #c62828; font-size: 1.5rem; }
+    .cita::after  { content: " »"; color: #c62828; font-size: 1.5rem; }
+
+    .aviso::before { content: "⚠ "; }
+    .aviso { background-color: #fff3e0; padding: 10px; border-left: 5px solid orange; }
+
+    .externo::after { content: " ↗"; }
+  </style>
+</head>
+<body>
+  <h1>Título con imagen delante</h1>
+  <h2>Subtítulo con imagen detrás</h2>
+  <p class="cita">La imaginación es más importante que el conocimiento</p>
+  <p class="aviso">Recuerda entregar la práctica antes del viernes.</p>
+  <p><a class="externo" href="https://developer.mozilla.org/es/docs/Web/CSS">Documentación CSS en MDN</a></p>
+</body>
+</html>

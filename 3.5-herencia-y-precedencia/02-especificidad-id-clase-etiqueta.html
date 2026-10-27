@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+  3.5 PRECEDENCIA · Ejemplo 02 — Especificidad: id > clase > etiqueta
+  Ejemplo del tema (#parrafo1 14px frente a p 8px) ampliado con una clase.
+  Las reglas están escritas a propósito del MÁS específico al MENOS,
+  para demostrar que aquí NO manda el orden, manda la especificidad.
+  RESULTADO:
+    - Párrafo 1 (id + clase): 28px, verde   → gana #parrafo1
+    - Párrafo 2 (solo clase): 18px, naranja → gana .importante
+    - Párrafo 3 (nada):       10px, gris    → solo le afecta p
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Especificidad</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    
+    #parrafo1 { font-size: 28px; color: green; }   /* (1,0,0) */
+    .importante { font-size: 18px; color: orange; }  /* (0,1,0) */
+    p { font-size: 10px; color: gray; }    /* (0,0,1) */
+
+  </style>
+</head>
+<body>
+  <p id="parrafo1" class="importante">Párrafo 1: id="parrafo1" class="importante"</p>
+  <p class="importante">Párrafo 2: class="importante"</p>
+  <p>Párrafo 3: sin id ni clase</p>
+</body>
+</html>

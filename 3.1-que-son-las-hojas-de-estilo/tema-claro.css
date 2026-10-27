@@ -1,0 +1,13 @@
+/* Tema claro: usado por 03-mismo-html-tema-claro.html */
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #fdfaf3;
+  color: #333;
+  margin: 40px;
+}
+header { border-bottom: 3px double #b08d57; }
+h1 { color: #7a4f1d; }
+.lema { font-style: italic; }
+nav a { color: #7a4f1d; margin-right: 20px; }
+h2 { color: #b08d57; }
+footer { margin-top: 40px; font-size: 0.8rem; color: #999; }

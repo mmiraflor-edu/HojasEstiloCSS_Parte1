@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+  3.2 ORDEN DE PRIORIDAD · Ejemplo 06 — mismo que el 05 con el orden INVERTIDO
+  Orden en <head>: 1º <style>, 2º <link> a cascada.css.
+  RESULTADO ESPERADO:
+    - Párrafo 1 → Courier New (ahora gana la hoja EXTERNA, porque aparece después).
+    - Párrafo 2 → sigue en Segoe UI (el style en línea sigue ganando).
+  CONCLUSIÓN: una hoja interna NO gana "por ser interna"; con igual especificidad
+  manda el orden de aparición.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Orden de prioridad invertido</title>
+  <style>
+    p {
+      font-family: 'Times New Roman';
+    }
+  </style>
+  <link rel="stylesheet" href="cascada.css">
+</head>
+<body>
+  <h1>Isaac Newton</h1>
+  <h2>(1643-1727)</h2>
+  <!-- Párrafo 1: text-align en línea (gana a "justify" de la hoja externa) -->
+  <p style="text-align: left">
+    Fue un físico, filósofo, teólogo, inventor, alquimista y matemático inglés. Es
+    autor de los <i>Philosophiæ naturalis principia mathematica</i>, más conocidos
+    como los Principia, donde describe la ley de la gravitación universal y estableció
+    las bases de la mecánica clásica mediante las leyes que llevan su nombre. Entre sus
+    otros descubrimientos científicos destacan los trabajos sobre la naturaleza de la
+    luz y la óptica y el desarrollo del cálculo matemático.
+  </p>
+  <!-- Párrafo 2: font-family en línea (gana a cualquier regla de las hojas) -->
+  <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">
+    Newton comparte con Gottfried Leibniz el crédito por el desarrollo del cálculo
+    integral y diferencial, que utilizó para formular sus leyes de la física. También
+    contribuyó en otras áreas de la matemática, desarrollando el teorema del binomio y
+    las fórmulas de Newton-Cotes.
+  </p>
+</body>
+</html>

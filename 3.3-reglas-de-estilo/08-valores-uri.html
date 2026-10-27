@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!--
+  3.3 VALORES DE URI · Ejemplo 08 — url() para imágenes de fondo
+  Estructura de carpetas:
+     09-valores-uri.html
+     css/fondo.css      ← aquí está url("../img/fondo.png")
+     img/fondo.png
+  QUÉ OBSERVAR: la ruta se resuelve desde el .css. Error típico del alumnado: escribir
+  url("img/fondo.png") en el .css → no carga (buscaría css/img/fondo.png).
+  PRUEBA A CAMBIAR: quita el ../ en css/fondo.css y recarga.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Valores URI</title>
+  <link rel="stylesheet" href="css/fondo.css">
+</head>
+<body>
+  <div class="cabecera">
+    <h1>Imagen de fondo con url()</h1>
+  </div>
+  <p>El body tiene una imagen pequeña (40×40) que se repite en mosaico.</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/*
+  Autor: Miguel
+  Última fecha de modificación: 26 de octubre de 2026
+  Descripción: hoja de ejemplo para el uso de comentarios
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #37474f;
+  margin: 30px;
+}
+
+h1 {
+  color: white; /* texto blanco */
+}
+
+/* ===== Sección: párrafos ===== */
+p {
+  color: #ffecb3;
+  /* font-size: 30px;   ← declaración "desactivada" con un comentario */
+}
+
+/* Ojo: // NO es un comentario en CSS.
+   El navegador lee "// Subtítulos h2" como parte del selector de la regla
+   siguiente, el selector queda inválido y se descarta la regla entera: */
+// Subtítulos h2
+h2 { color: #80cbc4; }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+  3.4 PSEUDO-CLASES ESTRUCTURALES · Ejemplo 08 — :first-child y :last-child
+  p:first-child → un <p> que es el PRIMER hijo de su padre
+  p:last-child  → un <p> que es el ÚLTIMO hijo de su padre
+  QUÉ OBSERVAR: se aplica en CADA div (cada uno es un padre distinto).
+  TRAMPA DIDÁCTICA: en el tercer div el primer hijo es un <h3>, no un <p>
+  → ningún párrafo sale en rojo. ":first-child" no significa "el primer p".
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - first-child y last-child</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    div { 
+      border: 1px solid #aaa; 
+      margin: 10px; 
+      padding: 0 10px; 
+      width: fit-content; /*Fíjate en este valor, permite que el width del div se ajuste al ancho de su contenido*/
+    }
+    p:first-child { color: red; }
+    p:last-child  { color: green; }
+  </style>
+</head>
+<body>
+  <div>
+    <p>Primer párrafo</p>
+    <p>Segundo párrafo</p>
+    <p>Tercer párrafo</p>
+    <p>Cuarto párrafo</p>
+  </div>
+  <div>
+    <p>Primer párrafo</p>
+    <p>Segundo párrafo</p>
+    <p>Tercer párrafo</p>
+    <p>Cuarto párrafo</p>
+  </div>
+  <div>
+    <h3>Un h3 delante</h3>
+    <p>Primer párrafo</p>
+    <p>Segundo párrafo</p>
+    <p>Tercer párrafo</p>
+  </div>
+</body>
+</html>

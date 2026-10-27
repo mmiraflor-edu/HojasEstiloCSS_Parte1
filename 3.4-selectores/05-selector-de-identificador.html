@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+  3.4 SELECTORES · Ejemplo 05 — Selector de identificador (#id)
+  En CSS: #parrafo1 { }    En HTML: id="parrafo1"
+  Reglas: un id es ÚNICO en la página y un elemento solo tiene UN id.
+  Se pueden mezclar id y class en el mismo elemento.
+  QUÉ OBSERVAR: el párrafo 3 tiene id y clase a la vez → recibe las dos reglas.
+  Extra: el id también sirve como ancla de enlace (href="#pie").
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Selector de identificador</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    #parrafo1 { font-size: 14pt; color: darkgreen; }
+    #destacado { border: 3px solid orange; padding: 10px; }
+    .cursiva { font-style: italic; }
+    #pie { background-color: #eee; padding: 10px; }
+    
+  </style>
+</head>
+<body>
+  <p><a href="#pie">Saltar al pie de página (#pie)</a></p>
+  <p id="parrafo1">Párrafo con id="parrafo1": 14pt y verde.</p>
+  <p>Párrafo sin id.</p>
+  <p id="destacado" class="cursiva">Párrafo con id="destacado" Y class="cursiva".</p>
+  <div id="pie">Pie de página (id="pie")</div>
+</body>
+</html>

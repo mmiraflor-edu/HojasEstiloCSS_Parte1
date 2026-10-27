@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+  3.5 PRECEDENCIA · Ejemplo 03 — Empate de especificidad: gana la ÚLTIMA
+  Las dos reglas son selectores de clase (0,1,0).
+  QUÉ OBSERVAR: el orden de las clases en el atributo class="..." NO importa;
+  importa el orden de las REGLAS en la hoja de estilo.
+  PRUEBA A CAMBIAR: intercambia las dos reglas de sitio → los dos párrafos cambian.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Orden de aparición</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 1.3rem; }
+    .azul { color: blue; }
+    .rojo { color: red; }    /* escrita después → gana en caso de empate */
+  </style>
+</head>
+<body>
+  <p class="azul rojo">class="azul rojo"</p>
+  <p class="rojo azul">class="rojo azul" (mismo resultado)</p>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+  3.4 SELECTORES · Ejemplo 04 — Un elemento con varias clases (separadas por espacio)
+  .muebles    → color del borde rojo
+  .habitacion → borde discontinuo de 2px
+  QUÉ OBSERVAR:
+    - Imagen 1 (solo muebles): tiene color pero NO tiene estilo de borde → no se ve borde
+      (border-style por defecto es none).
+    - Imagen 2 (solo habitacion): borde discontinuo negro (color por defecto).
+    - Imagen 3 (muebles habitacion): borde discontinuo ROJO de 2px.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Varias clases</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    article { 
+      display: inline-block; /* No lo hemos visto todavía*/
+      text-align: center; 
+      margin: 10px; }
+
+    .muebles {
+      border-color: red;
+    }
+
+    .habitacion {
+      border-width: 2px;
+      border-style: dashed;
+    }
+  </style>
+</head>
+<body>
+  <h1>Elemento con varias clases</h1>
+  <article>
+    <img src="img/cama.png" class="muebles" alt="Cama">
+    <figcaption>class="muebles"</figcaption>
+  </article>
+  <article>
+    <img src="img/cama.png" class="habitacion" alt="Cama">
+    <figcaption>class="habitacion"</figcaption>
+  </article>
+  <article>
+    <img src="img/cama.png" class="muebles habitacion" alt="Cama">
+    <figcaption>class="muebles habitacion"</figcaption>
+  </article>
+</body>
+</html>

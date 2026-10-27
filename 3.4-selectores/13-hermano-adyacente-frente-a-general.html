@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+  3.4 SELECTORES JERÁRQUICOS · Ejemplo 13 — Hermano adyacente (+) frente a general (~)
+  Mismo artículo dos veces:
+    .art1 h2 + p → solo el párrafo que va JUSTO después de cada h2
+    .art2 h2 ~ p → todos los párrafos que vienen DESPUÉS de un h2 (mismo padre)
+  Uso real de h2 + p: destacar la "entradilla" de cada sección.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Hermanos</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    article { 
+      border: 1px solid #ccc; 
+      padding: 0 10px; 
+      width:fit-content;
+      margin-bottom: 10px;
+    }
+
+    .art1 h2 + p { background-color: #fff59d; font-style: italic; }
+    .art2 h2 ~ p { background-color: #b3e5fc; }
+
+  </style>
+</head>
+<body>
+  <article class="art1">
+    <h1>h2 + p</h1>
+    <p>Párrafo antes de cualquier h2</p>
+    <h2>Sección 1</h2>
+    <p>Entradilla de la sección 1</p>
+    <p>Segundo párrafo</p>
+    <h2>Sección 2</h2>
+    <p>Entradilla de la sección 2</p>
+    <p>Segundo párrafo</p>
+  </article>
+  <article class="art2">
+    <h1>h2 ~ p</h1>
+    <p>Párrafo antes de cualquier h2</p>
+    <h2>Sección 1</h2>
+    <p>Entradilla de la sección 1</p>
+    <p>Segundo párrafo</p>
+    <h2>Sección 2</h2>
+    <p>Entradilla de la sección 2</p>
+    <p>Segundo párrafo</p>
+  </article>
+</body>
+</html>

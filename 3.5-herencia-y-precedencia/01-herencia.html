@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+  3.5 HERENCIA · Ejemplo 01 — Qué se hereda y qué no
+  En .caja definimos color, font-family Y border.
+  QUÉ OBSERVAR:
+    - color y font-family SÍ pasan a los hijos (h2, p, span...).
+    - border NO pasa: solo la .caja tiene borde, sus párrafos no.
+    - El párrafo con class="hereda-borde" usa border: inherit → copia el borde del padre.
+  Truco: F12 → Estilos → sección "Heredado de div.caja".
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Herencia</title>
+  <style>
+    body { margin: 30px; }
+
+    .caja {
+      color: darkblue;                    /* se hereda */
+      font-family: 'Courier New', monospace; /* se hereda */
+      border: 3px solid crimson;          /* NO se hereda */
+      padding: 10px;
+    }
+    .hereda-borde {
+      border: inherit;                    /* fuerza la herencia */
+    }
+
+  </style>
+</head>
+<body>
+  <p>Párrafo fuera de la caja: fuente y color por defecto.</p>
+  <div class="caja">
+    <h2>Título dentro de la caja</h2>
+    <p>Párrafo normal: hereda color y fuente, pero no tiene borde.</p>
+    <p>Un <span>span</span> dentro de un p también hereda (es nieto de .caja).</p>
+    <p class="hereda-borde">Párrafo con border: inherit → tiene el borde del padre.</p>
+  </div>
+</body>
+</html>

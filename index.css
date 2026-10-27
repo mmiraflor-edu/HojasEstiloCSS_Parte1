@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #1f2430;
+  background-color: #fafaf7;
+}
+
+/* Cabecera */
+header {
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+header h1 { margin: 0; font-size: 2rem; }
+header p  { margin: 0.2rem 0; color: #5d6577; }
+
+/* Menú de apartados */
+nav {
+  text-align: center;
+  padding: 0.6rem;
+  border-bottom: 1px solid #dde1e8;
+}
+nav a {
+  margin: 0 0.3rem;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid #dde1e8;
+  color: #1f2430;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover { color: #c2410c; border-color: #c2410c; }
+
+/* Contenido */
+main    { margin: 0 10%; }
+section { margin: 1.5rem 0 2.5rem; }
+h2 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid #1f2430;
+  padding-bottom: 0.4rem;
+}
+.num { color: #c2410c; }
+
+/* Lista de ejemplos */
+ol { list-style: none; padding: 0; }
+li {
+  background-color: white;
+  border: 1px solid #dde1e8;
+  padding: 0.7rem 1rem;
+  margin: 0.5rem 0;
+}
+li a { color: #1f2430; text-decoration: none; }
+li a:hover strong { color: #c2410c; text-decoration: underline; }
+
+.file {
+  display: block;          /* el nombre del archivo va en su propia línea */
+  font-family: "Courier New", monospace;
+  font-size: 0.8rem;
+  color: #5d6577;
+}
+.desc {
+  display: block;          /* la descripción va en su propia línea */
+  font-size: 0.9rem;
+  color: #5d6577;
+  margin-top: 0.2rem;
+}
+
+/* Pie */
+footer {
+  margin: 0 10%;
+  padding: 1rem 0 3rem;
+  font-size: 0.9rem;
+  color: #5d6577;
+}
+code { background-color: #eef0f3; }

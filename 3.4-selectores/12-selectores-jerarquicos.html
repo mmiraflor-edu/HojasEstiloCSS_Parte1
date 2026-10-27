@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+  3.4 SELECTORES JERÁRQUICOS · Ejemplo 12
+  A B   descendiente     A > B   hijo directo
+  A + B hermano adyacente   A ~ B hermano general
+  RESULTADO ESPERADO:
+    - 1er párrafo tras h1: centrado (h1 + p) Y azul negrita (h1 ~ p).
+    - Párrafos dentro de .des: borde verde (están dentro, aunque no sean hijos directos).
+    - Enlace "Sintaxis de CSS": rojo (hijo directo de un div).
+    - Último párrafo: azul negrita (hermano posterior de h1).
+    - Último enlace: color normal (su padre es body, no un div).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Selectores jerárquicos</title>
+  <style>
+
+    /* Selector descendiente */
+    .des p {
+      border-color: green;
+      border-width: 2px;
+      border-style: solid;
+    }
+
+    /* Selector hijo */
+    div > a {
+      color: red;
+    }
+
+    /* Selector hermano adyacente */
+    h1 + p {
+      text-align: center;
+    }
+
+    /* Selector hermano general */
+    h1 ~ p {
+      color: blue;
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Título</h1>
+  <p>Texto del subtítulo (hermano adyacente de h1, con centrado)</p>
+  <div class="des">
+    <div>
+      <p>Esto es el primer párrafo dentro de un div (borde verde)</p>
+      <p>Esto es un segundo párrafo en el mismo div (borde verde)</p>
+    </div>
+  </div>
+  <div>
+    <p>Párrafo en un div diferente (no afectado por selector hermano general, no es hermano de h1)</p>
+    <a href="css_syntaxis.html">Sintaxis de CSS</a> <!-- enlace hijo directo de div -->
+  </div>
+  <p>Esto es el último párrafo (afectado por selector hermano general)</p>
+  <a href="html_syntaxis.html">Sintaxis de HTML</a> <!-- enlace que no es hijo directo de un div -->
+</body>
+</html>

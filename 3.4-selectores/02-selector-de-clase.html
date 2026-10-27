@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+  3.4 SELECTORES · Ejemplo 02 — Selector de clase (.nombre)
+  En CSS: .rojo { }       En HTML: class="rojo"   (¡sin el punto!)
+  QUÉ OBSERVAR: la clase .grande sirve en etiquetas distintas (p, div, h1).
+  También se puede restringir a una etiqueta: p.rojo solo afecta a <p class="rojo">.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Selector de clase</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .rojo   { color: red; }
+    .grande { font-size: 50px; }
+    p.subrayado { text-decoration: underline; }   /* etiqueta + clase */
+  </style>
+</head>
+<body>
+  <p class="rojo">Este es un párrafo cuyo texto se escribe con color rojo</p>
+  <p>Este párrafo no tiene clase</p>
+
+  <p class="grande">Texto 1 (p.grande)</p>
+  <div class="grande">Texto 2 (div.grande)</div>
+  <h1 class="grande">Texto 3 (h1.grande)</h1>
+
+  <p class="subrayado">p con class="subrayado" → subrayado</p>
+  <div class="subrayado">div con class="subrayado" → NO (la regla es p.subrayado)</div>
+</body>
+</html>

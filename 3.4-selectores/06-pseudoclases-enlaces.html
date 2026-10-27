@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+  3.4 PSEUDO-CLASES · Ejemplo 06 — Estados de un enlace (orden L-V-H-A: LoVe HAte)
+  :link → no visitado · :visited → visitado · :hover → ratón encima
+  :active → mientras se pulsa · :focus → seleccionado con el teclado (tecla Tab)
+  PRUEBA EN CLASE:
+    - Pasa el ratón por encima (verde), mantén pulsado (rojo).
+    - Pulsa Tab varias veces → el enlace con foco se pone con fondo amarillo.
+    - El primer enlace apunta a esta misma página, así que sale como VISITADO (azul).
+    - Mueve a:hover ANTES de a:link y a:visited → deja de funcionar. ¿Por qué?
+      (misma especificidad → gana la regla escrita después).
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Pseudo-clases</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 1.3rem; }
+
+    a:link    { color: black; }             /* Enlace no visitado */
+    a:visited { color: blue; }              /* Enlace ya visitado */
+    a:hover   { color: green; }             /* Cursor encima del enlace */
+    a:active  { color: red; }               /* Al pulsar el enlace */
+    a:focus   { background-color: yellow; } /* Enlace seleccionado con el teclado */
+  </style>
+</head>
+<body>
+  <p>Esto es el primer párrafo</p>
+  <p>Esto es un párrafo</p>
+  <p><a href="06-pseudoclases-enlaces.html">Enlace a esta misma página (visitado)</a></p>
+  <p><a href="404.html">Enlace a una página no visitada</a></p>
+  <p><a href="01-selector-de-etiqueta.html">Enlace al ejemplo 01 de selectores</a></p>
+</body>
+</html>

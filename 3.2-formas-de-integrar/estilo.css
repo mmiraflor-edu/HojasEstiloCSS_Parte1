@@ -1,0 +1,20 @@
+/* Estilo.css — hoja externa del tema (apartado 3.2)
+   La usan: 03-hoja-externa.html y 04-misma-hoja-otra-pagina.html
+   Si cambias algo aquí, cambia en LAS DOS páginas a la vez. */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+  background-color: aliceblue;
+}
+h1 {
+  background-color: rgb(0,0,0);
+  color: rgb(192,192,192);
+  text-align: center;
+}
+h2 {
+  color: #0000ff;
+  text-align: center;
+}
+p {
+  text-align: justify;
+}

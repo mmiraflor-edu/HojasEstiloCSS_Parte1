@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+  3.3 UNIDADES DE MEDIDA · Ejemplo 06 — vw y vh (relativas a la ventana)
+  .caja1 { width: 50vw }  → siempre la mitad del ANCHO de la ventana
+  .caja2 { height: 50vh } → siempre la mitad del ALTO de la ventana
+  Diferencia % vs vw: dentro de un contenedor de 300px, 50% es la mitad del
+  contenedor (150px), pero 50vw sigue siendo la mitad de la ventana (¡y se sale!).
+  QUÉ OBSERVAR: redimensiona la ventana en ancho y en alto.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Unidades vw y vh</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    .caja1 { width: 50vw;  background-color: #ffcc80; }
+    .caja2 { height: 50vh; width: 200px; background-color: #90caf9; }
+
+    .contenedor { width: 300px; border: 3px solid #555; }
+    .porcentaje { width: 50%;   background-color: #a5d6a7; }
+    .viewport   { width: 50vw;  background-color: #ef9a9a; }
+  </style>
+</head>
+<body>
+  <h1>Unidades vw y vh</h1>
+
+  <h2>vw: porcentaje del ancho de la ventana</h2>
+  <div class="caja1">.caja1 { width: 50vw }</div>
+
+  <h2>vh: porcentaje del alto de la ventana</h2>
+  <div class="caja2">.caja2 { height: 50vh }</div>
+
+  <h2>% frente a vw dentro de un contenedor de 300px</h2>
+  <div class="contenedor">
+    <div class="porcentaje">width: 50% → 150px</div>
+    <div class="viewport">width: 50vw → mitad de la ventana</div>
+  </div>
+</body>
+</html>

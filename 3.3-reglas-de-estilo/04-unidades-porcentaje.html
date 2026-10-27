@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+  3.3 UNIDADES DE MEDIDA · Ejemplo 04 — % (relativo al contenedor padre)
+  Caso 1 (el del tema): .contenedor 800px → .contenido 50% = 400px.
+  Caso 2: contenedor que ocupa el 80% de la ventana → el 50% del hijo va cambiando.
+  QUÉ OBSERVAR: redimensiona la ventana; en el caso 1 nada cambia, en el 2 sí.
+  Truco: F12 → pasa el ratón por las cajas y verás su ancho real en píxeles.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - Unidades %</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .contenedor       { width: 800px; background-color: #ffe0b2; padding: 10px 0; }
+    .contenedor-fluido{ width: 80%;   background-color: #c8e6c9; padding: 10px 0; }
+    .contenido        { width: 50%;   background-color: #1976d2; color: white; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Unidad %: relativa al contenedor</h1>
+
+  <h2>Caso 1: contenedor de 800px</h2>
+  <div class="contenedor">
+    <div class="contenido">.contenido → 50% de 800px = 400px</div>
+  </div>
+
+  <h2>Caso 2: contenedor del 80% de la ventana</h2>
+  <div class="contenedor-fluido">
+    <div class="contenido">.contenido → 50% del contenedor (cambia al redimensionar)</div>
+  </div>
+</body>
+</html>

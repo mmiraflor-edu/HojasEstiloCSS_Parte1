@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+  3.4 PSEUDO-CLASES · Ejemplo 07 — :hover y :focus fuera de los enlaces
+  Las pseudo-clases no son solo para <a>.
+  QUÉ OBSERVAR:
+    - Tarjetas: cambian al pasar el ratón (:hover).
+    - Campos del formulario: se resaltan al hacer clic o llegar con Tab (:focus).
+    - Botón: :hover y :active.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - hover y focus</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; }
+
+    .tarjeta { 
+      display: inline-block; 
+      width: 150px; 
+      padding: 20px; 
+      margin: 5px;
+      background-color: #eceff1; 
+      border: 2px solid #b0bec5; 
+      text-align: center; 
+    }
+    
+    .tarjeta:hover { background-color: #0277bd; color: white; border-color: #01579b; }
+
+    input { padding: 8px; border: 2px solid #ccc; font-size: 1rem; }
+    input:focus { background-color: #f1f8e9;}
+
+    button { 
+      padding: 10px 20px; 
+      font-size: 1rem; 
+      background-color: #6a1b9a;
+      color: white;
+      border: none; 
+    }
+    button:hover  { background-color: #8e24aa; }
+    button:active { background-color: #38006b; }
+  </style>
+</head>
+<body>
+  <h1>:hover y :focus en otros elementos</h1>
+  <div class="tarjeta">HTML</div>
+  <div class="tarjeta">CSS</div>
+  <div class="tarjeta">JavaScript</div>
+
+  <h2>Formulario</h2>
+  <!-- Esto es un ejemplo de formulario simple, no es un formulario correcto, ya que faltarían muchos elementos <form> atributos como name id, etc...-->
+  <p><label>Nombre: <input type="text"></label></p>
+  <p><label>Correo: <input type="email"></label></p>
+  <button type="button">Enviar</button>
+</body>
+</html>

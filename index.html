@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="index.css">
+  <title>Ejemplos CSS · Parte 1</title>
+</head>
+<body>
+  <header>
+    <h1>Hojas de estilo CSS (I) · Batería de ejemplos</h1>
+  </header>
+  <nav><a href="#s3-1">3.1</a> <a href="#s3-2">3.2</a> <a href="#s3-3">3.3</a> <a href="#s3-4">3.4</a> <a href="#s3-5">3.5</a> <a href="#s3-6">3.6</a></nav>
+  <main>
+    <section id="s3-1">
+      <h2><span class="num">3.1</span> ¿Qué son las hojas de estilo?</h2>
+      <ol>
+        <li><a href="3.1-que-son-las-hojas-de-estilo/01-sin-css.html"><span class="file">01-sin-css.html</span><strong>Página sin CSS</strong></a><span class="desc">Punto de partida: estilos por defecto del navegador. Ábrelo junto al 02.</span></li>
+        <li><a href="3.1-que-son-las-hojas-de-estilo/02-primer-ejemplo.html"><span class="file">02-primer-ejemplo.html</span><strong>Primer ejemplo CSS</strong></a><span class="desc">Mismo HTML con un bloque &lt;style&gt;: separación contenido / presentación.</span></li>
+      </ol>
+    </section>
+    <section id="s3-2">
+      <h2><span class="num">3.2</span> Formas de integrar estilo</h2>
+      <ol>
+        <li><a href="3.2-formas-de-integrar/01-estilo-en-linea.html"><span class="file">01-estilo-en-linea.html</span><strong>Estilo en línea</strong></a><span class="desc">Atributo style en cada etiqueta.</span></li>
+        <li><a href="3.2-formas-de-integrar/02-hoja-interna.html"><span class="file">02-hoja-interna.html</span><strong>Hoja interna</strong></a><span class="desc">Bloque &lt;style&gt; en &lt;head&gt;; una regla afecta a todos los p.</span></li>
+        <li><a href="3.2-formas-de-integrar/03-hoja-externa.html"><span class="file">03-hoja-externa.html</span><strong>Hoja externa</strong></a><span class="desc">&lt;link&gt; a Estilo.css.</span></li>
+        <li><a href="3.2-formas-de-integrar/04-misma-hoja-otra-pagina.html"><span class="file">04-misma-hoja-otra-pagina.html</span><strong>Reutilizar la hoja externa</strong></a><span class="desc">Otra página con el mismo Estilo.css.</span></li>
+        <li><a href="3.2-formas-de-integrar/05-orden-prioridad.html"><span class="file">05-orden-prioridad.html</span><strong>Orden de prioridad</strong></a><span class="desc">&lt;link&gt; y después &lt;style&gt;: gana la interna por orden; en línea gana a ambas.</span></li>
+        <li><a href="3.2-formas-de-integrar/06-orden-prioridad-invertido.html"><span class="file">06-orden-prioridad-invertido.html</span><strong>Orden de prioridad invertido</strong></a><span class="desc">&lt;style&gt; y después &lt;link&gt;: ahora gana la externa. La interna no gana por ser interna.</span></li>
+      </ol>
+    </section>
+    <section id="s3-3">
+      <h2><span class="num">3.3</span> Reglas de estilo</h2>
+      <ol>
+        <li><a href="3.3-reglas-de-estilo/01-anatomia-de-una-regla.html"><span class="file">01-anatomia-de-una-regla.html</span><strong>Sintaxis de una regla y agrupación</strong></a><span class="desc">selector { propiedad: valor; } · body / p / h1, h2 del tema.</span></li>
+        <li><a href="3.3-reglas-de-estilo/02-errores-de-sintaxis.html"><span class="file">02-errores-de-sintaxis.html</span><strong>Errores de sintaxis típicos</strong></a><span class="desc">Falta de ;, propiedad o valor mal escritos, sin unidad, sin punto de clase.</span></li>
+        <li><a href="3.3-reglas-de-estilo/03-unidades-px.html"><span class="file">03-unidades-px.html</span><strong>Unidades: px</strong></a><span class="desc">Imagen de 800px frente a 100% al estrechar la ventana.</span></li>
+        <li><a href="3.3-reglas-de-estilo/04-unidades-porcentaje.html"><span class="file">04-unidades-porcentaje.html</span><strong>Unidades: %</strong></a><span class="desc">Contenedor 800px → hijo 50% = 400px; y contenedor fluido.</span></li>
+        <li><a href="3.3-reglas-de-estilo/05-unidades-rem.html"><span class="file">05-unidades-rem.html</span><strong>Unidades: rem</strong></a><span class="desc">px frente a rem cambiando html { font-size }.</span></li>
+        <li><a href="3.3-reglas-de-estilo/06-unidades-vw-vh.html"><span class="file">06-unidades-vw-vh.html</span><strong>Unidades: vw y vh</strong></a><span class="desc">Portada 100vh, cajas 50vw/50vh y diferencia con %.</span></li>
+        <li><a href="3.3-reglas-de-estilo/07-valores-de-color.html"><span class="file">07-valores-de-color.html</span><strong>Valores de color</strong></a><span class="desc">Nombre, hex, hex corto, rgb, hsl y transparencia rgba/hsla.</span></li>
+        <li><a href="3.3-reglas-de-estilo/08-valores-uri.html"><span class="file">08-valores-uri.html</span><strong>Valores URI: url()</strong></a><span class="desc">Imagen de fondo desde css/; la ruta es relativa al .css.</span></li>
+        <li><a href="3.3-reglas-de-estilo/09-comentarios.html"><span class="file">09-comentarios.html</span><strong>Comentarios /* */</strong></a><span class="desc">Documentar, desactivar declaraciones y por qué // no sirve.</span></li>
+      </ol>
+    </section>
+    <section id="s3-4">
+      <h2><span class="num">3.4</span> Selectores</h2>
+      <ol>
+        <li><a href="3.4-selectores/01-selector-de-etiqueta.html"><span class="file">01-selector-de-etiqueta.html</span><strong>Selector de etiqueta y agrupación</strong></a><span class="desc">div { } y h1, h2, h3 { }.</span></li>
+        <li><a href="3.4-selectores/02-selector-de-clase.html"><span class="file">02-selector-de-clase.html</span><strong>Selector de clase</strong></a><span class="desc">.rojo, .grande en varias etiquetas y p.subrayado.</span></li>
+        <li><a href="3.4-selectores/03-clases-con-div-y-span.html"><span class="file">03-clases-con-div-y-span.html</span><strong>Clases con span (refrán del tema)</strong></a><span class="desc">Marcar trozos de texto con &lt;span class&gt;.</span></li>
+        <li><a href="3.4-selectores/04-varias-clases.html"><span class="file">04-varias-clases.html</span><strong>Varias clases en un elemento</strong></a><span class="desc">class="muebles habitacion" con la imagen de la cama.</span></li>
+        <li><a href="3.4-selectores/05-selector-de-identificador.html"><span class="file">05-selector-de-identificador.html</span><strong>Selector de identificador</strong></a><span class="desc">#parrafo1, mezcla id + clase, id como ancla.</span></li>
+        <li><a href="3.4-selectores/06-pseudoclases-enlaces.html"><span class="file">06-pseudoclases-enlaces.html</span><strong>Pseudo-clases de enlaces</strong></a><span class="desc">link, visited, hover, active, focus y orden LVHA.</span></li>
+        <li><a href="3.4-selectores/07-hover-y-focus-en-otros-elementos.html"><span class="file">07-hover-y-focus-en-otros-elementos.html</span><strong>:hover y :focus en otros elementos</strong></a><span class="desc">Tarjetas, campos de formulario y botón.</span></li>
+        <li><a href="3.4-selectores/08-first-child-y-last-child.html"><span class="file">08-first-child-y-last-child.html</span><strong>:first-child y :last-child</strong></a><span class="desc">Ejemplo del tema + trampa: el primer hijo no es un p.</span></li>
+        <li><a href="3.4-selectores/09-nth-child.html"><span class="file">09-nth-child.html</span><strong>:nth-child(n), odd, even</strong></a><span class="desc">Posiciones 1, 2, 4; pares/impares; tabla cebra.</span></li>
+        <li><a href="3.4-selectores/10-first-letter-y-first-line.html"><span class="file">10-first-letter-y-first-line.html</span><strong>::first-letter y ::first-line</strong></a><span class="desc">Ejemplo del tema y letra capital.</span></li>
+        <li><a href="3.4-selectores/11-before-y-after.html"><span class="file">11-before-y-after.html</span><strong>::before y ::after</strong></a><span class="desc">Imagen smiley delante de h1 / detrás de h2, comillas e iconos.</span></li>
+        <li><a href="3.4-selectores/12-selectores-jerarquicos.html"><span class="file">12-selectores-jerarquicos.html</span><strong>Selectores jerárquicos</strong></a><span class="desc">Descendiente, hijo, hermano adyacente y general juntos.</span></li>
+        <li><a href="3.4-selectores/13-hermano-adyacente-frente-a-general.html"><span class="file">13-hermano-adyacente-frente-a-general.html</span><strong>Hermano adyacente frente a general</strong></a><span class="desc">h2 + p frente a h2 ~ p.</span></li>
+      </ol>
+    </section>
+    <section id="s3-5">
+      <h2><span class="num">3.5</span> Herencia y precedencia</h2>
+      <ol>
+        <li><a href="3.5-herencia-y-precedencia/01-herencia.html"><span class="file">01-herencia.html</span><strong>Qué se hereda y qué no</strong></a><span class="desc">color y font-family sí; border no; border: inherit.</span></li>
+        <li><a href="3.5-herencia-y-precedencia/02-especificidad-id-clase-etiqueta.html"><span class="file">02-especificidad-id-clase-etiqueta.html</span><strong>Especificidad: id &gt; clase &gt; etiqueta</strong></a><span class="desc">Ejemplo #parrafo1 frente a p del tema, ampliado.</span></li>
+        <li><a href="3.5-herencia-y-precedencia/03-orden-de-aparicion.html"><span class="file">03-orden-de-aparicion.html</span><strong>Empate: gana la última</strong></a><span class="desc">El orden en class="" no importa; importa el orden de las reglas.</span></li>
+        <li><a href="3.5-herencia-y-precedencia/04-en-linea-e-important.html"><span class="file">04-en-linea-e-important.html</span><strong>En línea e !important</strong></a><span class="desc">Escala: hoja &lt; en línea &lt; !important (y por qué evitarlo).</span></li>
+      </ol>
+    </section>
+    <section id="s3-6">
+      <h2><span class="num">3.6</span> Ejemplo de aplicación</h2>
+      <ol>
+        <li><a href="3.6-ejemplo-de-aplicacion/index.html"><span class="file">index.html</span><strong>Mini sitio · Inicio</strong></a><span class="desc">Dos páginas con una hoja externa comentada por apartados.</span></li>
+        <li><a href="3.6-ejemplo-de-aplicacion/contacto.html"><span class="file">contacto.html</span><strong>Mini sitio · Contacto</strong></a><span class="desc">Misma hoja; formulario con :focus.</span></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

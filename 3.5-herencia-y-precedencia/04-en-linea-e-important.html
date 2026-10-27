@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--
+  3.5 PRECEDENCIA · Ejemplo 04 — Estilo en línea y !important
+  Escala (estilos de autor, de menos a más fuerza):
+     regla normal en hoja  <  style="" en línea  <  regla con !important
+  QUÉ OBSERVAR:
+    - Párrafo 1: el style en línea gana al #id.
+    - Párrafo 2: .aviso con !important gana incluso al style en línea.
+  AVISO para el alumnado: !important es un "parche". Si lo necesitas a menudo,
+  es que los selectores están mal planteados. NO lo usaremos como solución habitual.
+-->
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>CSS - En línea e !important</title>
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 1.3rem; }
+
+    #p1 { color: green; }
+    .aviso { color: orange !important; }
+    
+  </style>
+</head>
+<body>
+  <p id="p1" style="color: blue;">Párrafo 1: #p1 verde, pero style="color: blue" → azul</p>
+  <p id="p2" class="aviso" style="color: blue;">Párrafo 2: style azul, pero .aviso !important → naranja</p>
+</body>
+</html>
